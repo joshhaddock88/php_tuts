@@ -46,6 +46,35 @@ $name = 'Mario';
 // three arguments: What to replacement, the replacement, and the string to replace on
 // echo str_replace('M', 'W', $name);
 
+//                       ** Tut 6: Ints & Floats
+
+// int
+$radius = 25;
+// float
+$pi = 3.14;
+
+// basic -, *, /, +, **
+
+// echo $pi * $radius ** 2;
+
+// Order of operation ( B I D M A S )
+// brackets, indices, division, multiplication, addition, subtraction
+// echo 2 * (4 + 9) / 3;
+
+// increment & decrement operators
+
+//$radius++; // adds 1 to radius
+//$radius--;
+
+// shorthand operators
+// +=, -=, *=
+
+// number functions
+
+// echo floor($pi); display 3
+// echo ceil($pi); display 4
+// echo pi(); returns value of pi
+
 ?>
 
 <!-- HTML SANDBOX -->
