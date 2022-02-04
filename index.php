@@ -46,7 +46,7 @@ $name = 'Mario';
 // three arguments: What to replacement, the replacement, and the string to replace on
 // echo str_replace('M', 'W', $name);
 
-//                       ** Tut 6: Ints & Floats
+//                       ** TUT 6: INTS & FLOATS
 
 // int
 $radius = 25;
@@ -74,6 +74,49 @@ $pi = 3.14;
 // echo floor($pi); display 3
 // echo ceil($pi); display 4
 // echo pi(); returns value of pi
+
+//                           ** TUT 7: ARRAYS
+
+// indexed arrays
+
+$peopleOne = ['Shaun', 'Crystal', 'Ryan'];
+// echo $peopleOne[1];
+$peopleTwo = array('Ken', 'Chun-Li');
+// echo $peopleTwo[1];
+
+$ages = [20, 30, 40, 50];
+// echo $ages; < does not work because echo expects a string.
+// print_r($ages); < does work. Print readable.
+
+$ages[1] = 25;
+// print_r($ages);
+
+$ages[] = 60;
+// print_r($ages);
+array_push($ages, 70);
+// print_ur($ages);
+
+// echo count($ages);
+
+$peopleThree = array_merge($peopleOne, $peopleTwo);
+// print_r($peopleThree);
+
+// Associative Arrays
+
+$ninjasOne = ['Shaun' => 'black', 'Mario' => 'orange', 'Luigi' => 'brown'];
+//echo $ninjasOne['Mario'];
+// print_r($ninjasOne);
+
+$ninjasTwo = array('Bowser' => 'green', 'Peach' => 'yellow');
+// print_r($ninjasTwo);
+
+$ninjasTwo['Peach'] = 'pink';
+// print_r($ninjasTwo);
+
+// echo count($ninjasOne);
+
+$ninjasThree = array_merge($ninjasOne, $ninjasTwo);
+print_r($ninjasThree);
 
 ?>
 
