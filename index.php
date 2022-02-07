@@ -183,6 +183,31 @@ $products = [
 
 //----------------------------------------------------- TUT 10 : BOOLS --------------------------------------------------------
 
+//echo true; evaluates to "1";
+//echo false; false is translated to "";
+
+// NUMBERS
+// echo 5 > 10;
+// echo 5 < 10; "1"
+// echo 5 == 10;
+// echo 5 == "5"; "1"
+// echo 5 != 10;
+// echo 5 <= 5; "1"
+// echo 5 >= 5; "1"
+
+//STRINGS
+// echo 'shaun' < 'yoshi'; "1"
+// echo 'shaun' > 'yoshi';
+// echo 'shaun' > 'Shaun'; "1"
+// echo 'mario' == 'Mario'; false
+
+// LOOSE EQUALITY VS STRICT EQUALITY
+// Loose equality does not check for type
+// 5 == '5'; "1"
+// Strict equality does.
+// 5 === '5'; false
+// 5 == 5 || 5 === 5 both true
+
 ?>
 
 <!-- HTML SANDBOX -->
