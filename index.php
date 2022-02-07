@@ -24,7 +24,7 @@
 //echo $stringOne . $stringTwo;
 // You don't need a space. They can be touching and it will still work.
 
-$name = 'Mario';
+// $name = 'Mario';
 //echo 'Hey, my name is ' . $name;
 
 //If you use double quotes you can call variables directly without concating
@@ -49,9 +49,9 @@ $name = 'Mario';
 //                       ** TUT 6: INTS & FLOATS
 
 // int
-$radius = 25;
+// $radius = 25;
 // float
-$pi = 3.14;
+// $pi = 3.14;
 
 // basic -, *, /, +, **
 
@@ -79,60 +79,109 @@ $pi = 3.14;
 
 // indexed arrays
 
-$peopleOne = ['Shaun', 'Crystal', 'Ryan'];
+// $peopleOne = ['Shaun', 'Crystal', 'Ryan'];
 // echo $peopleOne[1];
-$peopleTwo = array('Ken', 'Chun-Li');
+// $peopleTwo = array('Ken', 'Chun-Li');
 // echo $peopleTwo[1];
 
-$ages = [20, 30, 40, 50];
+// $ages = [20, 30, 40, 50];
 // echo $ages; < does not work because echo expects a string.
 // print_r($ages); < does work. Print readable.
 
-$ages[1] = 25;
+// $ages[1] = 25;
 // print_r($ages);
 
-$ages[] = 60;
+// $ages[] = 60;
 // print_r($ages);
-array_push($ages, 70);
+// array_push($ages, 70);
 // print_ur($ages);
 
 // echo count($ages);
 
-$peopleThree = array_merge($peopleOne, $peopleTwo);
+// $peopleThree = array_merge($peopleOne, $peopleTwo);
 // print_r($peopleThree);
 
 // Associative Arrays
 
-$ninjasOne = ['Shaun' => 'black', 'Mario' => 'orange', 'Luigi' => 'brown'];
+// $ninjasOne = ['Shaun' => 'black', 'Mario' => 'orange', 'Luigi' => 'brown'];
 //echo $ninjasOne['Mario'];
 // print_r($ninjasOne);
 
-$ninjasTwo = array('Bowser' => 'green', 'Peach' => 'yellow');
+// $ninjasTwo = array('Bowser' => 'green', 'Peach' => 'yellow');
 // print_r($ninjasTwo);
 
-$ninjasTwo['Peach'] = 'pink';
+// $ninjasTwo['Peach'] = 'pink';
 // print_r($ninjasTwo);
 
 // echo count($ninjasOne);
 
-$ninjasThree = array_merge($ninjasOne, $ninjasTwo);
+// $ninjasThree = array_merge($ninjasOne, $ninjasTwo);
 //print_r($ninjasThree);
 
-//                    ** TUT 8: MULTIDIMENSIONAL ARRAYS
+//-----------------------------------------TUT 8: MULTIDIMENSIONAL ARRAYS-----------------------------
 
-$blogs = [
-    ['title' => 'mario party', 'author' => 'mario', 'content' => 'lorem', 'likes' => 30],
-    ['title' => 'Mario kart cheats', 'author' => 'toad', 'content' => 'lorem', 'likes' => 25],
-    ['title' => 'Zelda hidden chests', 'author' => 'link', 'content' => 'lorem', 'likes' => 50]
-];
+//$blogs = [
+//    ['title' => 'mario party', 'author' => 'mario', 'content' => 'lorem', 'likes' => 30],
+//    ['title' => 'Mario kart cheats', 'author' => 'toad', 'content' => 'lorem', 'likes' => 25],
+//    ['title' => 'Zelda hidden chests', 'author' => 'link', 'content' => 'lorem', 'likes' => 50]
+//];
 
 //print_r($blogs[1][1]);
 // echo $blogs[2]['author'];
 // echo count($blogs);
 
-$blogs[] = ['title' => 'castle party', 'author' => 'peach', 'content' => 'lorem', 'likes' => 100];
+// $blogs[] = ['title' => 'castle party', 'author' => 'peach', 'content' => 'lorem', 'likes' => 100];
 
-print_r($blogs);
+// print_r($blogs);
+// $popped = array_pop($blogs); - gets rid of the last element in the array
+
+// ---------------------------------------------- TUT 9 : LOOPS ----------------------------------------
+
+// basic 'for' loop
+//for($i = 0; $i < 5; $i++){
+//    echo 'some template';
+//}
+
+//for($i = 0; $i < count($variable); i++){
+//    echo 'some template';
+//}
+
+//foreach($variable as $variable) {
+//    echo 'some template'
+//}
+
+$ninjas = ['Shaun', 'Ryu', 'Yoshi'];
+
+// for($i = 0; $i < count($ninjas); $i++){
+//     echo $ninjas[$i] . '<br />';
+// }
+
+// foreach($ninjas as $ninja){
+//     echo $ninja . '<br />';
+// }
+
+$products = [
+    ['name' => 'shiny star', 'price' => 20],
+    ['name' => 'green shell', 'price' => 10],
+    ['name' => 'red shell', 'price' => 15],
+    ['name' => 'gold coin', 'price' => 5],
+    ['name' => 'lightning bolt', 'price' => 40],
+    ['name' => 'banana peel', 'price' => 2]
+];
+
+// foreach($products as $product){
+//     echo $product['name'] . ': ' . $product['price'];
+//     echo '<br />';
+// }
+
+// $i = 0;
+// while($i < count($products)){
+//     echo $products[$i]['name'];
+//     echo '<br />';
+//     $i++;
+// }
+
+//----------------------------------------------------- TUT 10 : BOOLS --------------------------------------------------------
 
 ?>
 
@@ -143,7 +192,13 @@ print_r($blogs);
         <title>PHP Tutorials</title>
     </head>
     <body>
-        <h1>User Profile Pages</h1>
+        <h1>Products</h1>
+        <ul>
+            <?php foreach($products as $product) { ?>
+                <h3><?php echo $product['name']; ?></h3>
+                <p>$<?php echo $product['price']; ?></p>
+            <?php } ?>
+        </ul>
 
     </body>
 </html>
