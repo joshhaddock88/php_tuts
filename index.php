@@ -1,6 +1,6 @@
 <?php 
 
-//                             ** TUT 4: VARIABLES AND CONSTANTS
+//--------------------------------------------------- TUT 4: VARIABLES AND CONSTANTS -----------------------------------
 // echo 'Hello, World!';
 // variables (can't start with number or special character. Should start with lower case)
 
@@ -15,7 +15,7 @@
 // name can be overridden in this instance, because it is non-constant
 // $name = 'Mario';
 
-//                           ** TUT 5: STRING TUTORIAL
+//--------------------------------------------------- TUT 5: STRING TUTORIAL -------------------------------------------
 
 //$stringOne = 'My email is ';
 //$stringTwo = 'joshhaddock88@gmail.com';
@@ -46,7 +46,7 @@
 // three arguments: What to replacement, the replacement, and the string to replace on
 // echo str_replace('M', 'W', $name);
 
-//                       ** TUT 6: INTS & FLOATS
+//---------------------------------------------------- TUT 6: INTS & FLOATS ----------------------------------------------
 
 // int
 // $radius = 25;
@@ -75,7 +75,7 @@
 // echo ceil($pi); display 4
 // echo pi(); returns value of pi
 
-//                           ** TUT 7: ARRAYS
+//----------------------------------------------------------- TUT 7: ARRAYS-----------------------------------------------------
 
 // indexed arrays
 
@@ -150,7 +150,7 @@
 //    echo 'some template'
 //}
 
-$ninjas = ['Shaun', 'Ryu', 'Yoshi'];
+// $ninjas = ['Shaun', 'Ryu', 'Yoshi'];
 
 // for($i = 0; $i < count($ninjas); $i++){
 //     echo $ninjas[$i] . '<br />';
@@ -208,6 +208,55 @@ $products = [
 // 5 === '5'; false
 // 5 == 5 || 5 === 5 both true
 
+//-------------------------------------------------------TUT 11 : CONDITIONAL STATEMENTS ---------------------------------------------
+
+// $price = 20;
+// if($price < 10) {
+//     echo 'Condition met!';
+// } elseif($price < 30) {
+//     echo 'elseif Condition met!';
+// } else {
+//     echo 'Condition not met';
+// }
+
+// foreach($products as $product){
+//     if($product['price'] < 15 && $product['price'] > 2){
+//         echo $product['name'] . '<br />';
+//     }
+//     if($product['price'] > 20 || $product['price'] < 10){
+//         echo $product['name'] . '<br />';
+//     }
+// }
+
+//--------------------------------------------------TUT 12: BREAK & CONTINUE ---------------------------------------------------------------
+
+//  foreach($products as $product){
+//     if($product['name'] === 'lightning bolt'){
+//         break;
+//     }
+//     if($product['price'] > 15){
+//         continue;
+//     }
+//     echo $product['name'] . '<br />';
+// }
+
+//-------------------------------------------------- TUT 13: FUNCTIONS ----------------------------------------------------------------------
+
+// Functions are blocks of code to do specific work. intput -> function -> output
+
+function sayHello($name = 'Shaun', $time = 'morning'){
+    echo "Good $time, $name!" . '<br />';
+}
+
+sayHello('Mario', 'night');
+
+function formatProduct($product){
+    return "{$product['name']} costs \${$product['price']}.";
+}
+
+$formatted = formatProduct(['name' =>'Gold Star', 'price' => 20]);
+echo $formatted;
+
 ?>
 
 <!-- HTML SANDBOX -->
@@ -219,10 +268,13 @@ $products = [
     <body>
         <h1>Products</h1>
         <ul>
-            <?php foreach($products as $product) { ?>
+            <!-- <?php foreach($products as $product) { ?>
+                <?php if($product['price'] > 15) { ?>
+                    <li><?php echo $product['name']; ?></li>
+                <?php } ?>
                 <h3><?php echo $product['name']; ?></h3>
                 <p>$<?php echo $product['price']; ?></p>
-            <?php } ?>
+            <?php } ?> -->
         </ul>
 
     </body>
